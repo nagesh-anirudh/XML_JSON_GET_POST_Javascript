@@ -1,16 +1,16 @@
 const fs = require('fs');
-describe('Protractor Typescript Demo', function() {
-	it('Javascript executions', function() {
-		const totalContent = require("C:\\Users\\user\\Desktop\\nagesh\\sample-json.json");
+describe('QA Assesment for JSON & XML Reading & Updating', function() {
+	it('Updation of value in JSON file', function() {
+		var totalContent = require("C:\\Users\\user\\Desktop\\nagesh\\sample-json.json");
         totalContent["firstname"] = "Anirudh"
         // write to file
         let data = JSON.stringify(totalContent);
         fs.writeFileSync("C:\\Users\\user\\Desktop\\nagesh\\edited-json.json", data);
         
     });
-    it('Javascript executions', function() {
-        const DOMParser = require('xmldom').DOMParser;
-        const XMLSerializer = require('xmldom').XMLSerializer;
+    it('Verification of Updated value in XML file', function() {
+        var DOMParser = require('xmldom').DOMParser;
+        var XMLSerializer = require('xmldom').XMLSerializer;
         var filename = "C:\\Users\\user\\Desktop\\nagesh\\a.xml";
         fs.readFile(filename, "utf-8", function (err,data) 
         {
