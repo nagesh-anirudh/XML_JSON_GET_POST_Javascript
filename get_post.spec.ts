@@ -1,6 +1,6 @@
 let request = require("request");
-describe("Errors in Protractor",function(){
-  it("Error handleing in protractor",function(done){
+describe("QA Assesment on GET & POST methods on API",function(){
+  it("Verification of GET method",function(done){
       let userID = 1
 
     request.get({
@@ -16,8 +16,7 @@ describe("Errors in Protractor",function(){
         done();
     });
   });
-  it("POST ",function(done){
-
+  it("Verification of POST method",function(done){
     request.post({
       "headers": { "content-type": "application/json; charset=UTF-8" },
       "url": "https://jsonplaceholder.typicode.com/posts",
